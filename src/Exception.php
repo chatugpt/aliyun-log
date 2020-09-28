@@ -27,7 +27,7 @@ class Exception extends \Exception{
      * @param string $requestId
      *            the request id of the response, '' is set if client error.
      */
-    public function __construct($code, $message, $requestId='') {
+    public function __construct($code, $message = '', $requestId='') {
         parent::__construct($message);
         $this->code = $code;
         $this->message = $message;
