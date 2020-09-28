@@ -3,10 +3,10 @@
 require_once 'vendor/autoload.php';
 
 $endpoint= 'http://cn-shenzhen.log.aliyuncs.com';
-$accessKeyId = '';
-$accessKey = '';
-$project = '';
-$logstore = '';
+$accessKeyId = '1';
+$accessKey = '2';
+$project = '3';
+$logstore = '4';
 $token= '';
 $client = new Le2le\AliyunLog\Client($endpoint, $accessKeyId, $accessKey,$token);
 
@@ -25,10 +25,15 @@ foreach ($array as $one)
 $request = new Le2le\AliyunLog\Models\Request\PutLogsRequest($project, $logstore,
 	$topic, null, $logitems);
 
+$response = '';
 try {
 	$response = $client->putLogs($request);
-} catch (\Aliyun_Log_Exception $ex) {
+} catch (Le2le\AliyunLog\Exception $ex) {
+
+	var_dump($ex);
 } catch (\Exception $ex) {
+
+	var_dump($ex);
 }
 
 var_dump($response);
