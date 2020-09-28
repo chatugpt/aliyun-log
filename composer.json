@@ -1,0 +1,18 @@
+{
+    "name": "le2le/aliyun-log",
+    "type": "library",
+    "authors": [
+        {
+            "name": "lennonxu",
+            "email": "heiman8@qq.com"
+        }
+    ],
+    "require" : {
+        "php" : ">=5.4.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Le2le\\AliyunLog\\" : "src/"
+        }
+    }
+}

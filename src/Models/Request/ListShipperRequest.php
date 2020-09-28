@@ -1,0 +1,35 @@
+<?php
+namespace Le2le\AliyunLog\Models\Request;
+
+
+
+
+class ListShipperRequest extends Request{
+    private $logStore;
+
+    /**
+     * CreateShipperRequest Constructor
+     *
+     */
+    public function __construct($project) {
+        parent::__construct ( $project );
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogStore()
+    {
+        return $this->logStore;
+    }
+
+    /**
+     * @param mixed $logStore
+     */
+    public function setLogStore($logStore)
+    {
+        $this->logStore = $logStore;
+    }
+
+
+}
